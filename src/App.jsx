@@ -131,7 +131,8 @@ export default function App() {
             className="main-button prompt"
             onClick={() => setPage('prompt')}
           >
-            <span className="button-icon">✦</span>
+                      >
+            <span className="button-icon">🪄</span>
             <span>ПРОМПТ</span>
             <small>Создать запрос для AI</small>
           </button>
