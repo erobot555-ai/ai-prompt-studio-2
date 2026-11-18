@@ -35,9 +35,10 @@ const GENERATORS = {
 
 export default function App() {
     const [page, setPage] = useState('home')
-  const [showHelp, setShowHelp] = useState(false)
+    const [showHelp, setShowHelp] = useState(false)
   const [showAbout, setShowAbout] = useState(false)
   const [showHistory, setShowHistory] = useState(false)
+  const [showProfile, setShowProfile] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState('')
   const [selectedGenerators, setSelectedGenerators] = useState({})
   const [showAllGenerators, setShowAllGenerators] = useState(false)
