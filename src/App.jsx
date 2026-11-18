@@ -33,19 +33,32 @@ const GENERATORS = {
 }
 export default function App() {
   const [page, setPage] = useState('home')
+    const [showHelp, setShowHelp] = useState(false)
 const [selectedCategory, setSelectedCategory] = useState('')
   const [selectedGenerators, setSelectedGenerators] = useState({})
   const [showAllGenerators, setShowAllGenerators] = useState(false)
   const [activeCategory, setActiveCategory] = useState('')
       return (
     <main className="app">
-      <header className="header">
-        <div className="logo">AI</div>
-        <div>
-          <h1>PROMPT STUDIO</h1>
-          <p>Твоя идея. Наш интеллект.</p>
-        </div>
-      </header>
+     
+<header className="header">
+  <div className="logo">AI</div>
+  <div>
+    <h1>PROMPT STUDIO</h1>
+    <p>Твоя идея. Наш интеллект.</p>
+  </div>
+
+  {page === 'home' && (
+    <button
+      className="help-button"
+      onClick={() => setShowHelp(!showHelp)}
+      aria-label="Помощь"
+    >
+      ?
+    </button>
+  )}
+</header>
+
 
       {page === 'home' && (
         <section className="home">
