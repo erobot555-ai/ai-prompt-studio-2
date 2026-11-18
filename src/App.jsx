@@ -125,10 +125,7 @@ export default function App() {
 
       {page === 'home' && (
         <section className="home">
-          <div className="welcome">
-  <h2>Воплоти идею в жизнь</h2>
-</div>
-
+          
           <button
             className="main-button prompt"
             onClick={() => setPage('prompt')}
