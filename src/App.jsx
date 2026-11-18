@@ -172,3 +172,12 @@ const [selectedCategory, setSelectedCategory] = useState('')
     </main>
   )
 }
+.category-button.active {
+  background: linear-gradient(145deg, #927cff, #5942b5);
+  border: 2px solid #c2b5ff;
+  box-shadow:
+    0 6px 0 #302466,
+    0 10px 22px #8065ff88,
+    inset 0 1px 3px #ffffff66;
+  transform: translateY(-3px);
+}
