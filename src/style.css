@@ -79,24 +79,64 @@ button {
   font-size: 14px;
 }
 
+
 .main-button {
   width: 100%;
-  min-height: 155px;
-  border: 2px solid #ffffff22;
-  border-radius: 26px;
-  margin-bottom: 24px;
-  padding: 24px;
+  min-height: 235px;
+  border: 2px solid #ffffff35;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  padding: 25px;
   color: white;
-  text-align: left;
+  text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 17px;
+  position: relative;
   box-shadow:
-    0 9px 0 #171626,
-    0 14px 25px #00000066,
-    inset 0 2px 3px #ffffff33;
+    0 12px 0 #171626,
+    0 19px 30px #00000088,
+    inset 0 3px 5px #ffffff44,
+    inset 0 -5px 10px #00000022;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.main-button span:nth-child(2) {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow: 0 3px 5px #00000055;
+}
+
+.main-button small {
+  color: #e0dcf5;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 260px;
+}
+
+.prompt {
+  background: linear-gradient(145deg, #7962e5, #403080 75%, #30245e);
+}
+
+.message {
+  background: linear-gradient(145deg, #3194aa, #20566b 75%, #173e50);
+}
+
+.button-icon {
+  font-size: 58px;
+  line-height: 1.2;
+  filter: drop-shadow(0 5px 5px #00000055);
+}
+
+.main-button:active {
+  transform: translateY(7px);
+  box-shadow:
+    0 4px 0 #171626,
+    0 8px 15px #00000066,
+    inset 0 2px 5px #ffffff33;
 }
 
 .main-button span:nth-child(2) {
