@@ -76,7 +76,7 @@ button {
 /* Значок истории */
 .header-tools span:first-child {
   font-size: 40px;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .header-brand {
