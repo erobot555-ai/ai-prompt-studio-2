@@ -144,8 +144,8 @@ button {
   min-height: clamp(76px, 12vh, 105px);
   max-height: 170px;
   flex: 1 1 0;
-  border: 2px solid #ffffff35;
-  border-radius: 25px;
+  border: 1px solid #ffffff70;
+  border-radius: 27px;
   margin-bottom: 30px;
   padding: clamp(8px, 1.5vh, 12px);
   color: white;
@@ -157,10 +157,11 @@ button {
   gap: clamp(4px, 1vh, 8px);
   position: relative;
   box-shadow:
-    0 8px 0 #171626,
-    0 14px 24px #00000088,
-    inset 0 3px 5px #ffffff44,
-    inset 0 -5px 10px #00000022;
+    0 10px 0 #171626,
+    0 15px 28px #00000099,
+    inset 0 4px 8px #ffffff55,
+    inset 0 -6px 12px #00000035;
+  text-shadow: 0 2px 5px #00000055;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .main-button span:nth-child(2) {
