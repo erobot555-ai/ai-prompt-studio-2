@@ -644,6 +644,11 @@ button:active:not(.main-button) {
   padding: 20px;
   background: rgba(0, 0, 0, 0.58);
   animation: helpFadeIn 0.2s ease;
+  pointer-events: none;
+}
+
+.help-card {
+  pointer-events: auto;
 }
 
 .help-card {
