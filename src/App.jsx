@@ -155,11 +155,9 @@ export default function App() {
           <div className="ad-placeholder">
             <span>РЕКЛАМНОЕ МЕСТО</span>
           </div>
-          <nav className="bottom-nav">
-            <button>История</button>
-            <button>Настройки</button>
-            <button>Информация</button>
-          </nav>
+                    <footer className="app-footer">
+            AI PROMPT STUDIO 2.0
+          </footer>
         </section>
       )}
 
