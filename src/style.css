@@ -40,16 +40,57 @@ button {
 }
 
 /* Шапка */
+/* Шапка */
 .header {
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  padding: 8px 0 16px;
+}
+
+.header-tools {
+  width: 100%;
+  display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 12px 0 18px;
+  justify-content: space-around;
+  gap: 8px;
+}
+
+.header-tools span,
+.header-tools .help-button {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  display: grid;
+  place-items: center;
+  color: #ded8f5;
+  font-size: 21px;
+  line-height: 1;
+}
+
+.header-tools .help-button {
+  padding: 0;
+  border: 1px solid #71668f;
+  border-radius: 11px;
+  background: linear-gradient(145deg, #514477, #29213f);
+  color: white;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 0;
 }
 
 .logo {
   width: 48px;
   height: 48px;
+  flex: 0 0 48px;
   border-radius: 15px;
   display: grid;
   place-items: center;
@@ -69,7 +110,6 @@ button {
   color: #999bb3;
   font-size: 12px;
 }
-
 /* Приветствие */
 .welcome {
   margin: 4px 0 8px;
