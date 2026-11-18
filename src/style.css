@@ -144,8 +144,8 @@ flex: 1 1 0;
 }
 
 .button-icon {
-  font-size: 58px;
-  line-height: 1.2;
+  font-size: 44px;
+  line-height: 1;
   filter: drop-shadow(0 5px 5px #00000055);
 }
 
