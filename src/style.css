@@ -524,16 +524,6 @@ button:active:not(.main-button) {
   line-height: 1.6;
 }
 
-@keyframes historySlideIn {
-  from {
-    transform: translateX(-100%);
-  }
-
-  to {
-    transform: translateX(0);
-  }
-}
-
 @keyframes historyFadeIn {
   from {
     opacity: 0;
@@ -542,4 +532,41 @@ button:active:not(.main-button) {
   to {
     opacity: 1;
   }
+}
+
+/* Страница настроек — чёрно-белый стиль */
+.settings-page {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  width: 100%;
+  max-width: 520px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: 24px 20px;
+  overflow-y: auto;
+  background: #ffffff;
+  color: #111111;
+}
+
+.settings-page h2 {
+  margin: 35px 0 12px;
+  color: #111111;
+  font-size: 28px;
+}
+
+.settings-page p {
+  color: #666666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.settings-back {
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+  color: #111111;
+  font-size: 16px;
+  font-weight: bold;
 }
