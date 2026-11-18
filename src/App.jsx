@@ -58,7 +58,7 @@ const [selectedCategory, setSelectedCategory] = useState('')
       {item}
     </button>
   ))}
-</div>>
+</div>
 
           <div className="microphone">🎙️</div>
           <p className="hint">Расскажи свою идею голосом</p>
