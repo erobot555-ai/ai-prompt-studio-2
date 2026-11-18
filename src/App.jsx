@@ -282,7 +282,7 @@ export default function App() {
         </section>
       )}
 
-      {page === 'settings' && (
+            {page === 'settings' && (
         <section className="settings-page">
           <button
             className="settings-back"
@@ -293,8 +293,94 @@ export default function App() {
 
           <h2>Настройки</h2>
           <p>Настрой AI Prompt Studio под себя.</p>
+
+          <div className="settings-list">
+            {[
+              {
+                icon: '◐',
+                title: 'Внешний вид',
+                description: 'Тема, оформление и размер текста'
+              },
+              {
+                icon: '文',
+                title: 'Язык',
+                description: 'Язык приложения и результатов'
+              },
+              {
+                icon: '🎙',
+                title: 'Голос и озвучивание',
+                description: 'Голосовой ввод, голос и скорость речи'
+              },
+              {
+                icon: '♧',
+                title: 'Уведомления',
+                description: 'Оповещения и напоминания'
+              },
+              {
+                icon: '✦',
+                title: 'Параметры генерации',
+                description: 'Качество, длина и стиль результатов'
+              },
+              {
+                icon: '▦',
+                title: 'Мои AI-генераторы',
+                description: 'Избранные и предпочитаемые сервисы'
+              },
+              {
+                icon: '⌘',
+                title: 'API и подключения',
+                description: 'Подключение сервисов и собственные ключи'
+              },
+              {
+                icon: '♧',
+                title: 'Конфиденциальность и безопасность',
+                description: 'Доступ, защита и разрешения'
+              },
+              {
+                icon: '▤',
+                title: 'Хранение данных',
+                description: 'История, сохранённые материалы и очистка'
+              },
+              {
+                icon: '•••',
+                title: 'Прочее',
+                description: 'Дополнительные параметры приложения'
+              }
+            ].map(item => (
+              <button
+                className="settings-item"
+                key={item.title}
+                onClick={() => setPage('settings-' + item.title)}
+              >
+                <span className="settings-item-icon">
+                  {item.icon}
+                </span>
+
+                <span className="settings-item-content">
+                  <strong>{item.title}</strong>
+                  <small>{item.description}</small>
+                </span>
+
+                <span className="settings-item-arrow">→</span>
+              </button>
+            ))}
+          </div>
         </section>
       )}
-             </main>
-  )
-} 
+
+      {page.startsWith('settings-') && (
+        <section className="settings-page">
+          <button
+            className="settings-back"
+            onClick={() => setPage('settings')}
+          >
+            ← К настройкам
+          </button>
+
+          <h2>{page.replace('settings-', '')}</h2>
+
+          <p>
+            Здесь будут находиться настройки этого раздела.
+          </p>
+        </section>
+      )}
