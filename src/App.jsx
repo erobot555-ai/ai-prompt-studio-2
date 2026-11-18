@@ -295,4 +295,6 @@ export default function App() {
           <p>Настрой AI Prompt Studio под себя.</p>
         </section>
       )}
-          
+             </main>
+  )
+} 
