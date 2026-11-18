@@ -90,7 +90,7 @@ const [selectedCategory, setSelectedCategory] = useState('')
   ].map(item => (
     <div className="category-wrapper" key={item.name}>
       <button
-        className="category-button"
+        className={`category-button ${activeCategory === item.name ? 'active' : ''}`}
         onClick={() => {
           setSelectedCategory(
             selectedCategory === item.name ? '' : item.name
@@ -120,13 +120,12 @@ const [selectedCategory, setSelectedCategory] = useState('')
               key={generator}
               className="generator-button"
               onClick={() => {
-                setSelectedGenerators(prev => ({
-                  ...prev,
-                  [item.name]: generator
-                }))
-                setSelectedCategory('')
-                setShowAllGenerators(false)
-              }}
+  setActiveCategory(item.name)
+  setSelectedCategory(
+    selectedCategory === item.name ? '' : item.name
+  )
+  setShowAllGenerators(false)
+}}
             >
               {generator}
             </button>
