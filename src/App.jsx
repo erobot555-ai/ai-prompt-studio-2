@@ -295,22 +295,4 @@ export default function App() {
           <p>Настрой AI Prompt Studio под себя.</p>
         </section>
       )}
-          <div className="categories">
-            {['MAX', 'VK', 'WhatsApp', 'Telegram', 'Другой'].map(item => (
-              <button key={item}>{item}</button>
-            ))}
-          </div>
-
-          <div className="microphone">🎙️</div>
-          <p className="hint">Надиктуй своё сообщение</p>
-          <textarea placeholder="Или введите сообщение..." />
-
-          <button className="stop-button">
-            Стоп — выбрать стиль
-          </button>
-        </section>
-      )}
-
-    </main>
-  )
-}
+          
