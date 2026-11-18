@@ -11,7 +11,7 @@ const GENERATORS = {
     'Flux'
   ],
   Видео: [
-    'Kling',
+    'Kling', 
     'Runway',
     'Sora',
     'Veo',
@@ -36,6 +36,7 @@ export default function App() {
 const [selectedCategory, setSelectedCategory] = useState('')
   const [selectedGenerators, setSelectedGenerators] = useState({})
   const [showAllGenerators, setShowAllGenerators] = useState(false)
+  const [activeCategory, setActiveCategory] = useState('')
       return (
     <main className="app">
       <header className="header">
