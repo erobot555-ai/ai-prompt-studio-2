@@ -206,21 +206,17 @@ button {
   text-align: center;
 }
 
-/* Кнопка возврата */
-.back {
-  background: none;
-  border: none;
-  color: #a5a6b9;
-  font-size: 13px;
-}
-
 /* Рабочие экраны */
 .work-page h2 {
   font-size: 27px;
   margin: 30px 0 10px;
 }
 
+/* Кнопка возврата */
 .back {
+  background: none;
+  border: none;
+  color: #a5a6b9;
   font-size: 15px;
   padding: 10px 0;
 }
