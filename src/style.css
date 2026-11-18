@@ -398,3 +398,22 @@ button:active {
     inset 0 1px 3px #ffffff66;
   transform: translateY(-3px);
 }
+/* Компактное место для рекламы */
+.ad-placeholder {
+  width: 100%;
+  min-height: 52px;
+  margin-top: auto;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #55516f;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #202033, #191927);
+}
+
+.ad-placeholder span {
+  color: #77758f;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
