@@ -50,9 +50,13 @@ export default function App() {
       <header className="header">
 
         <div className="header-tools">
-                    <span
+                              <span
             title="История"
-            onClick={() => setShowHistory(true)}
+            onClick={() => {
+              setShowHelp(false)
+              setShowAbout(false)
+              setShowHistory(true)
+            }}
           >
             ◷
           </span>
@@ -63,19 +67,21 @@ export default function App() {
             ⚙
           </span>
           <span title="Профиль">♙</span>
-                              <span
+                                        <span
             title="О продукте"
             onClick={() => {
               setShowHelp(false)
+              setShowHistory(false)
               setShowAbout(true)
             }}
           >
             ⓘ
           </span>
-                                        <button
+                                                  <button
             className="help-button"
             onClick={() => {
               setShowAbout(false)
+              setShowHistory(false)
               setShowHelp(true)
             }}
             aria-label="Помощь"
