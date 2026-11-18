@@ -470,3 +470,76 @@ button:active:not(.main-button) {
   font-size: 10px;
   letter-spacing: 2px;
 }
+
+/* Шторка истории */
+.history-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-start;
+  background: #00000099;
+  animation: historyFadeIn 0.25s ease;
+}
+
+.history-drawer {
+  width: min(86%, 360px);
+  height: 100%;
+  padding: 24px 20px;
+  background: linear-gradient(160deg, #29263f, #171725 75%);
+  border-right: 1px solid #66558f;
+  border-radius: 0 22px 22px 0;
+  box-shadow: 12px 0 35px #00000088;
+  animation: historySlideIn 0.3s ease-out;
+}
+
+.history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #ffffff22;
+}
+
+.history-header h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.history-close {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #ffffff33;
+  border-radius: 12px;
+  background: #ffffff12;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.history-content {
+  padding-top: 20px;
+  color: #aaa8c0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@keyframes historySlideIn {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes historyFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
