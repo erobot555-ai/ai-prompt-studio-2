@@ -130,9 +130,8 @@ export default function App() {
       )}
 
             {page === 'home' && showHelp && (
-        <div className="help-overlay">
+                <div className="help-overlay">
           <div className="help-card">
-                    <div className="help-card">
             <h2>Что умеет AI Prompt Studio?</h2>
 
             <p>
