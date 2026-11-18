@@ -44,10 +44,9 @@ button {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: 12px;
-  padding: 8px 0 16px;
+  gap: 6px;
+  padding: 0 0 10px;
 }
-
 .header-tools {
   width: 100%;
   display: flex;
