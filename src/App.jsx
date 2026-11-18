@@ -133,13 +133,7 @@ export default function App() {
             {page === 'home' && showHelp && (
         <div className="help-overlay">
           <div className="help-card">
-            <button
-              className="help-close"
-              onClick={() => setShowHelp(false)}
-            >
-              ✕
-            </button>
-
+                    <div className="help-card">
             <h2>Что умеет AI Prompt Studio?</h2>
 
             <p>
@@ -461,14 +455,7 @@ export default function App() {
 
       {page === 'home' && showAbout && (
         <div className="help-overlay">
-          <div className="help-card">
-            <button
-              className="help-close"
-              onClick={() => setShowAbout(false)}
-            >
-              ✕
-            </button>
-
+                    <div className="help-card">
             <h2>О продукте</h2>
 
             <p>
