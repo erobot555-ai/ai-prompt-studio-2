@@ -63,15 +63,21 @@ export default function App() {
             ⚙
           </span>
           <span title="Профиль">♙</span>
-                    <span
+                              <span
             title="О продукте"
-            onClick={() => setShowAbout(true)}
+            onClick={() => {
+              setShowHelp(false)
+              setShowAbout(true)
+            }}
           >
             ⓘ
           </span>
-                              <button
+                                        <button
             className="help-button"
-            onClick={() => setShowHelp(true)}
+            onClick={() => {
+              setShowAbout(false)
+              setShowHelp(true)
+            }}
             aria-label="Помощь"
           >
             ?
