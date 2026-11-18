@@ -60,11 +60,10 @@ export default function App() {
           </button>
         </div>
 
-        <div className="header-brand">
+                <div className="header-brand">
           <div className="logo">AI</div>
           <div>
             <h1>PROMPT STUDIO</h1>
-            <p>Твои идеи — наш результат.</p>
           </div>
         </div>
 
