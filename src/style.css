@@ -139,6 +139,7 @@ button {
 
 /* Главные кнопки */
 .main-button {
+.main-button {
   width: 100%;
   height: auto;
   min-height: clamp(76px, 12vh, 105px);
@@ -146,7 +147,7 @@ button {
   flex: 1 1 0;
   border: 2px solid #ffffff35;
   border-radius: 25px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   padding: clamp(8px, 1.5vh, 12px);
   color: white;
   text-align: center;
