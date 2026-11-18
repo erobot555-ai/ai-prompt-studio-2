@@ -46,6 +46,7 @@ button {
   align-items: stretch;
   gap: 6px;
   padding: 0 0 10px;
+  margin-top: -8px;
 }
 .header-tools {
   width: 100%;
