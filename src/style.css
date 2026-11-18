@@ -100,7 +100,7 @@ button {
   width: 100%;
   height: clamp(105px, 16vh, 150px);
   min-height: 0;
-  flex-shrink: 1;
+flex: 1 1 0;
   border: 2px solid #ffffff35;
   border-radius: 25px;
   margin-bottom: 14px;
