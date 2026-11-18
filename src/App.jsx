@@ -44,24 +44,7 @@ export default function App() {
   return (
     <main className="app">
 
-      <header className="header">
-
-  <div className="header-tools">
-    <span title="История">◷</span>
-    <span title="Настройки">⚙</span>
-    <span title="Профиль">♙</span>
-    <span title="О продукте">ⓘ</span>
-    <button
-      className="help-button"
-      onClick={() => setShowHelp(!showHelp)}
-      aria-label="Помощь"
-    >
-      ?
-    </button>
-  </div>
-
-  <div className="header-brand">
-    <div className="logo">AI</div>
+     
     <div>
       <h1>PROMPT STUDIO</h1>
       <p>Твои идеи — наш результат.</p>
