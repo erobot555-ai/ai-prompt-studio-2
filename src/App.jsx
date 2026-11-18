@@ -48,73 +48,119 @@ const [selectedCategory, setSelectedCategory] = useState('')
     <p>Твоя идея. Наш интеллект.</p>
   </div>
 
-  {page === 'home' && (
-    <button
-      className="help-button"
-      onClick={() => setShowHelp(!showHelp)}
-      aria-label="Помощь"
-    >
-      ?
-    </button>
-  )}
-
-</header>
-
-{page === 'home' && showHelp && (
-  <div className="help-overlay">
-    <div className="help-card">
-      <button
-        className="help-close"
-        onClick={() => setShowHelp(false)}
-      >
-        ✕
-      </button>
-
-      <h2>В чём наша задача?</h2>
-
+  
+{page === 'home' && (
+  <section className="home">
+    <div className="welcome">
+      <span>AI PROMPT STUDIO 2.0</span>
+      <h2>Преврати свою идею в результат</h2>
       <p>
-        AI Prompt Studio — это твой интеллектуальный помощник
-        для работы с искусственным интеллектом.
-      </p>
-
-      <p>
-        Мы не просто создаём красивые промпты. Мы превращаем
-        твои идеи в точные, продуманные и адаптированные под
-        язык и особенности выбранного AI-генератора запросы.
-      </p>
-
-      <p>
-        <strong>
-          Меньше лишних слов. Меньше неудачных попыток.
-          Больше точности и качественных результатов.
-        </strong>
-      </p>
-
-      <p>
-        Помогаем сократить время на подготовку запросов,
-        количество повторных генераций и, где это возможно,
-        расходы на обработку.
-      </p>
-
-      <h3>А ещё мы умеем работать с сообщениями и SMS!</h3>
-
-      <p>
-        Исправлять ошибки, улучшать текст, менять его длину,
-        корректировать формулировки и настраивать стиль:
-        от дружелюбного до официального, делового или романтичного.
-      </p>
-
-      <p>
-        <strong>
-          Твоя идея — наша задача. Точный запрос и правильные
-          слова — лучший путь к результату.
-        </strong>
+        Просто расскажи, что ты хочешь.
+        Мы поможем подобрать правильные слова.
       </p>
     </div>
-  </div>
+
+    <button className="main-button prompt" onClick={() => setPage('prompt')}>
+      <span className="button-icon">✦</span>
+      <span>ПРОМПТ</span>
+      <small>Создать запрос для AI</small>
+    </button>
+
+    <button className="main-button message" onClick={() => setPage('message')}>
+      <span className="button-icon">✉</span>
+      <span>СООБЩЕНИЕ</span>
+      <small>Создать красивое сообщение</small>
+    </button>
+
+    <nav className="bottom-nav">
+      <button>История</button>
+      <button>Настройки</button>
+      <button>Информация</button>
+    </nav>
+  </section>
 )}
 
-{page === 'home' && (
+{page === 'prompt' && (
+  <section className="work-page">
+    <button className="back" onClick={() => setPage('home')}>← Назад</button>
+    <h2>Создаём промпт</h2>
+    <p className="hint">Что будем создавать?</p>
+
+    <div className="categories">
+      {[
+        { name: 'Картинка', icon: '🖼️' },
+        { name: 'Видео', icon: '🎥' },
+        { name: 'Музыка', icon: '🎵' },
+        { name: 'Текст', icon: '📝' }
+      ].map(item => (
+        <div className="category-wrapper" key={item.name}>
+          <button
+            className={`category-button ${activeCategory === item.name ? 'active' : ''}`}
+            onClick={() => {
+              setActiveCategory(item.name)
+              setSelectedCategory(
+                selectedCategory === item.name ? '' : item.name
+              )
+              setShowAllGenerators(false)
+            }}
+          >
+            <span className="category-icon">{item.icon}</span>
+            <span className="category-name">{item.name}</span>
+
+            {selectedGenerators[item.name] && (
+              <span className="selected-generator">
+                {selectedGenerators[item.name]}
+              </span>
+            )}
+          </button>
+
+          {selectedCategory === item.name && (
+            <div className="generator-overlay">
+              <p className="hint">Выбери AI-генератор:</p>
+
+              {(showAllGenerators
+                ? GENERATORS[item.name]
+                : GENERATORS[item.name].slice(0, 3)
+              ).map(generator => (
+                <button
+                  key={generator}
+                  className="generator-button"
+                  onClick={() => {
+                    setSelectedGenerators(prev => ({
+                      ...prev,
+                      [item.name]: generator
+                    }))
+                    setSelectedCategory('')
+                    setShowAllGenerators(false)
+                  }}
+                >
+                  {generator}
+                </button>
+              ))}
+
+              {GENERATORS[item.name].length > 3 && (
+                <button
+                  className="generator-button other-generators"
+                  onClick={() => setShowAllGenerators(!showAllGenerators)}
+                >
+                  {showAllGenerators
+                    ? 'Свернуть список ↑'
+                    : 'Другие генераторы →'}
+                </button>
+              )}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+
+    <div className="microphone">🎙️</div>
+    <p className="hint">Расскажи свою идею голосом</p>
+    <textarea placeholder="Или введите текст вручную..." />
+    <button className="stop-button">Стоп — получить 3 варианта</button>
+  </section>
+)}
+
 
         <section className="work-page">
           <button className="back" onClick={() => setPage('home')}>← Назад</button>
