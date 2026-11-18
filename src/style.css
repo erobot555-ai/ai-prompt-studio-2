@@ -148,19 +148,29 @@ button {
 }
 
 .categories button {
-  min-height: 52px;
+  min-height: 76px;
+  padding: 14px 10px;
   color: white;
-  background: #29283e;
-  border: 1px solid #45415e;
-  border-radius: 13px;
+  background: linear-gradient(145deg, #393653, #242238);
+  border: 1px solid #514b70;
+  border-radius: 17px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow:
+    0 6px 0 #171626,
+    0 9px 15px #00000055,
+    inset 0 1px 1px #ffffff22;
   transition: all 0.2s ease;
 }
 
 .categories button.selected {
-  background: linear-gradient(135deg, #8065ff, #5942b5);
-  border: 1px solid #b29fff;
-  box-shadow: 0 0 18px #8065ff66;
-  transform: scale(1.03);
+  background: linear-gradient(145deg, #927cff, #5942b5);
+  border: 1px solid #c2b5ff;
+  box-shadow:
+    0 5px 0 #302466,
+    0 9px 20px #8065ff55,
+    inset 0 1px 2px #ffffff55;
+  transform: translateY(-2px);
 }
 
 .microphone {
