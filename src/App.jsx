@@ -428,22 +428,75 @@ export default function App() {
       )}
 
       {page.startsWith('settings-') && (
-        <section className="settings-page">
-          <button
-            className="settings-back"
-            onClick={() => setPage('settings')}
-          >
-            ← К настройкам
-          </button>
+            {page === 'home' && showHelp && (
+        <div className="help-overlay">
+          <div className="help-card">
+            <button
+              className="help-close"
+              onClick={() => setShowHelp(false)}
+            >
+              ✕
+            </button>
 
-          <h2>{page.replace('settings-', '')}</h2>
+            <h2>Что умеет AI Prompt Studio?</h2>
 
-          <p>
-            Здесь будут доступны настройки этого раздела.
-          </p>
-        </section>
+            <p>
+              Превращает твои идеи в точные и продуманные запросы,
+              адаптированные под выбранный AI-генератор.
+            </p>
+
+            <p>
+              Помогает создавать и улучшать сообщения:
+              исправлять ошибки, менять формулировки,
+              длину и стиль текста.
+            </p>
+
+            <p>
+              <strong>
+                Меньше лишних слов. Меньше неудачных попыток.
+                Больше точности и качественных результатов.
+              </strong>
+            </p>
+          </div>
+        </div>
       )}
 
-    </main>
-  )
-}
+      {page === 'home' && showAbout && (
+        <div className="help-overlay">
+          <div className="help-card">
+            <button
+              className="help-close"
+              onClick={() => setShowAbout(false)}
+            >
+              ✕
+            </button>
+
+            <h2>О продукте</h2>
+
+            <p>
+              <strong>AI Prompt Studio 2.0</strong> — интеллектуальная
+              студия для создания точных запросов и работы с текстом.
+            </p>
+
+            <p>
+              Помогает подготовить промпты для генерации изображений,
+              видео, музыки и текста с учётом особенностей выбранного
+              AI-генератора.
+            </p>
+
+            <p>
+              Также помогает создавать, улучшать и редактировать
+              сообщения, SMS и другие тексты.
+            </p>
+
+            <p>
+              Наша цель — сделать работу с искусственным интеллектом
+              понятнее, удобнее и результативнее.
+            </p>
+
+            <p>
+              <strong>AI PROMPT STUDIO 2.0</strong>
+            </p>
+          </div>
+        </div>
+      )}
