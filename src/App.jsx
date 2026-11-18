@@ -54,7 +54,12 @@ export default function App() {
           >
             ◷
           </span>
-          <span title="Настройки">⚙</span>
+                    <span
+            title="Настройки"
+            onClick={() => setPage('settings')}
+          >
+            ⚙
+          </span>
           <span title="Профиль">♙</span>
           <span title="О продукте">ⓘ</span>
           <button
