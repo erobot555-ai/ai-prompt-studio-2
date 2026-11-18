@@ -139,7 +139,6 @@ button {
 
 /* Главные кнопки */
 .main-button {
-.main-button {
   width: 100%;
   height: auto;
   min-height: clamp(76px, 12vh, 105px);
