@@ -160,9 +160,11 @@ button {
 .bottom-nav {
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 8px;
   border-top: 1px solid #303044;
-  padding-top: 20px;
+  padding-top: 12px;
+  padding-bottom: 4px;
+  flex-shrink: 0;
 }
 
 .bottom-nav button,
