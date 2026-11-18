@@ -68,21 +68,24 @@ export default function App() {
           </span>
           <span title="Профиль">♙</span>
                                         <span
+            title="О продукте"          <span
             title="О продукте"
             onClick={() => {
+              const isOpen = showAbout
               setShowHelp(false)
               setShowHistory(false)
-              setShowAbout(true)
+              setShowAbout(!isOpen)
             }}
           >
             ⓘ
           </span>
-                                                  <button
+                                                            <button
             className="help-button"
             onClick={() => {
+              const isOpen = showHelp
               setShowAbout(false)
               setShowHistory(false)
-              setShowHelp(true)
+              setShowHelp(!isOpen)
             }}
             aria-label="Помощь"
           >
