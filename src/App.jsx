@@ -98,6 +98,7 @@ const [selectedCategory, setSelectedCategory] = useState('')
   )
   setShowAllGenerators(false)
 }}
+        >
         <span className="category-icon">{item.icon}</span>
         <span className="category-name">{item.name}</span>
 
