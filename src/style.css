@@ -48,7 +48,8 @@ button {
   padding: 0 0 10px;
   margin-top: -20px;
 }
-}.header-tools {
+
+.header-tools {
   width: 100%;
   display: flex;
   align-items: center;
