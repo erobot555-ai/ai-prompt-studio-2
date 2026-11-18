@@ -41,8 +41,10 @@ export default function App() {
   const [showAllGenerators, setShowAllGenerators] = useState(false)
   const [activeCategory, setActiveCategory] = useState('')
 
-  return (
-          <header className="header">
+    return (
+    <main className="app">
+
+      <header className="header">
 
         <div className="header-tools">
           <span title="История">◷</span>
@@ -66,22 +68,6 @@ export default function App() {
           </div>
         </div>
 
-      </header>
-        <div class<Name="logo">AI</div>
-        <div>
-          <h1>PROMPT STUDIO</h1>
-          <p>Твоя идея. Наш интеллект.</p>
-        </div>
-
-        {page === 'home' && (
-          <button
-            className="help-button"
-            onClick={() => setShowHelp(!showHelp)}
-            aria-label="Помощь"
-          >
-            ?
-          </button>
-        )}
       </header>
 
       {page === 'home' && showHelp && (
