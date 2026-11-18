@@ -427,38 +427,21 @@ export default function App() {
         </section>
       )}
 
-      {page.startsWith('settings-') && (
-            {page === 'home' && showHelp && (
-        <div className="help-overlay">
-          <div className="help-card">
-            <button
-              className="help-close"
-              onClick={() => setShowHelp(false)}
-            >
-              ✕
-            </button>
+            {page.startsWith('settings-') && (
+        <section className="settings-page">
+          <button
+            className="settings-back"
+            onClick={() => setPage('settings')}
+          >
+            ← К настройкам
+          </button>
 
-            <h2>Что умеет AI Prompt Studio?</h2>
+          <h2>{page.replace('settings-', '')}</h2>
 
-            <p>
-              Превращает твои идеи в точные и продуманные запросы,
-              адаптированные под выбранный AI-генератор.
-            </p>
-
-            <p>
-              Помогает создавать и улучшать сообщения:
-              исправлять ошибки, менять формулировки,
-              длину и стиль текста.
-            </p>
-
-            <p>
-              <strong>
-                Меньше лишних слов. Меньше неудачных попыток.
-                Больше точности и качественных результатов.
-              </strong>
-            </p>
-          </div>
-        </div>
+          <p>
+            Здесь будут доступны настройки этого раздела.
+          </p>
+        </section>
       )}
 
       {page === 'home' && showAbout && (
@@ -500,3 +483,7 @@ export default function App() {
           </div>
         </div>
       )}
+
+    </main>
+  )
+}
