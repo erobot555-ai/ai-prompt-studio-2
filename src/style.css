@@ -215,3 +215,37 @@ button:active {
     padding: 18px 14px;
   }
 }
+.generator-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin: 18px 0;
+  animation: fadeIn 0.25s ease;
+}
+
+.generator-button {
+  min-height: 48px;
+  padding: 12px 16px;
+  color: #ffffff;
+  background: linear-gradient(145deg, #29283e, #1d1c30);
+  border: 1px solid #45415e;
+  border-radius: 13px;
+  font-size: 15px;
+  box-shadow: 0 4px 8px #00000055;
+}
+
+.generator-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px #00000055;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
