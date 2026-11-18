@@ -369,7 +369,7 @@ export default function App() {
         </section>
       )}
 
-                  {page === 'help' && (
+                        {page === 'help' && (
         <section className="help-page">
           <button
             className="settings-back"
@@ -420,3 +420,24 @@ export default function App() {
           </p>
         </section>
       )}
+
+      {page.startsWith('settings-') && (
+        <section className="settings-page">
+          <button
+            className="settings-back"
+            onClick={() => setPage('settings')}
+          >
+            ← К настройкам
+          </button>
+
+          <h2>{page.replace('settings-', '')}</h2>
+
+          <p>
+            Здесь будут доступны настройки этого раздела.
+          </p>
+        </section>
+      )}
+
+    </main>
+  )
+}
