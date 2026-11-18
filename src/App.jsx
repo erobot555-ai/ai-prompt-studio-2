@@ -1,9 +1,40 @@
 
 import React, { useState } from 'react'
-
+const GENERATORS = {
+  Картинка: [
+    'Шедеврум',
+    'Kandinsky',
+    'YandexART',
+    'Midjourney',
+    'DALL·E',
+    'Stable Diffusion',
+    'Flux'
+  ],
+  Видео: [
+    'Kling',
+    'Runway',
+    'Sora',
+    'Veo',
+    'Pika',
+    'Hailuo'
+  ],
+  Музыка: [
+    'Suno',
+    'Udio',
+    'Mubert'
+  ],
+  Текст: [
+    'YandexGPT',
+    'GigaChat',
+    'ChatGPT',
+    'Claude',
+    'Gemini'
+  ]
+}
 export default function App() {
   const [page, setPage] = useState('home')
 const [selectedCategory, setSelectedCategory] = useState('')
+  const [selectedGenerator, setSelectedGenerator] = useState('')
   return (
     <main className="app">
       <header className="header">
