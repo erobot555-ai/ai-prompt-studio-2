@@ -35,6 +35,7 @@ export default function App() {
   const [page, setPage] = useState('home')
 const [selectedCategory, setSelectedCategory] = useState('')
   const [selectedGenerators, setSelectedGenerators] = useState({})
+  const [showAllGenerators, setShowAllGenerators] = useState(false)
       return (
     <main className="app">
       <header className="header">
