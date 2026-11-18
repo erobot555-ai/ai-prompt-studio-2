@@ -258,7 +258,7 @@ export default function App() {
         </section>
       )}
 
-      {page === 'message' && (
+            {page === 'message' && (
         <section className="work-page">
           <button className="back" onClick={() => setPage('home')}>
             ← Назад
@@ -266,6 +266,35 @@ export default function App() {
 
           <h2>Создаём сообщение</h2>
 
+          <div className="categories">
+            {['MAX', 'VK', 'WhatsApp', 'Telegram', 'Другой'].map(item => (
+              <button key={item}>{item}</button>
+            ))}
+          </div>
+
+          <div className="microphone">🎙️</div>
+          <p className="hint">Надиктуй своё сообщение</p>
+          <textarea placeholder="Или введите сообщение..." />
+
+          <button className="stop-button">
+            Стоп — выбрать стиль
+          </button>
+        </section>
+      )}
+
+      {page === 'settings' && (
+        <section className="settings-page">
+          <button
+            className="settings-back"
+            onClick={() => setPage('home')}
+          >
+            ← Назад
+          </button>
+
+          <h2>Настройки</h2>
+          <p>Настрой AI Prompt Studio под себя.</p>
+        </section>
+      )}
           <div className="categories">
             {['MAX', 'VK', 'WhatsApp', 'Telegram', 'Другой'].map(item => (
               <button key={item}>{item}</button>
