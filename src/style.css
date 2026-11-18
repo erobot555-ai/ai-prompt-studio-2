@@ -98,7 +98,7 @@ button {
 /* Главные кнопки */
 .main-button {
   width: 100%;
-  height: clamp(115px, 18vh, 160px);
+  height: clamp(105px, 16vh, 150px);
   min-height: 0;
   flex-shrink: 1;
   border: 2px solid #ffffff35;
