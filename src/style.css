@@ -536,6 +536,8 @@ button:active:not(.main-button) {
 
 /* Страница настроек — чёрно-белый стиль */
 .settings-page {
+/* Страница настроек — чёрно-белый стиль */
+.settings-page {
   position: fixed;
   inset: 0;
   z-index: 1100;
@@ -569,4 +571,67 @@ button:active:not(.main-button) {
   color: #111111;
   font-size: 16px;
   font-weight: bold;
+}
+
+/* Список разделов настроек */
+.settings-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 28px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.settings-item {
+  width: 100%;
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 2px;
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+  border-radius: 0;
+  background: #ffffff;
+  color: #111111;
+  text-align: left;
+}
+
+.settings-item-icon {
+  width: 34px;
+  flex: 0 0 34px;
+  display: grid;
+  place-items: center;
+  color: #222222;
+  font-size: 24px;
+}
+
+.settings-item-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.settings-item-content strong {
+  color: #111111;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.settings-item-content small {
+  color: #777777;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.settings-item-arrow {
+  flex: 0 0 auto;
+  color: #777777;
+  font-size: 22px;
+  padding-left: 5px;
+}
+
+.settings-item:active {
+  background: #f5f5f5;
 }
