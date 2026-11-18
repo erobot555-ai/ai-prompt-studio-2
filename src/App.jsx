@@ -97,7 +97,71 @@ const [selectedCategory, setSelectedCategory] = useState('')
     {GENERATORS[selectedCategory].map(generator => (
       <button
         key={generator}
-        className="generator-button"
+        <div className="categories">
+  {[
+    { name: 'Картинка', icon: '🖼️' },
+    { name: 'Видео', icon: '🎥' },
+    { name: 'Музыка', icon: '🎵' },
+    { name: 'Текст', icon: '📝' }
+  ].map(item => (
+    <div className="category-wrapper" key={item.name}>
+      <button
+        className="category-button"
+        onClick={() => {
+          setSelectedCategory(
+            selectedCategory === item.name ? '' : item.name
+          )
+          setShowAllGenerators(false)
+        }}
+      >
+        <span className="category-icon">{item.icon}</span>
+        <span className="category-name">{item.name}</span>
+        {selectedGenerators[item.name] && (
+          <span className="selected-generator">
+            {selectedGenerators[item.name]}
+          </span>
+        )}
+      </button>
+
+      {selectedCategory === item.name && (
+        <div className="generator-overlay">
+          <p className="hint">Выбери AI-генератор:</p>
+
+          {(showAllGenerators
+            ? GENERATORS[item.name]
+            : GENERATORS[item.name].slice(0, 3)
+          ).map(generator => (
+            <button
+              key={generator}
+              className="generator-button"
+              onClick={() => {
+                setSelectedGenerators(prev => ({
+                  ...prev,
+                  [item.name]: generator
+                }))
+                setSelectedCategory('')
+                setShowAllGenerators(false)
+              }}
+            >
+              {generator}
+            </button>
+          ))}
+
+          {GENERATORS[item.name].length > 3 && (
+            <button
+              className="generator-button other-generators"
+              onClick={() => setShowAllGenerators(!showAllGenerators)}
+            >
+              {showAllGenerators
+                ? 'Свернуть список ↑'
+                : 'Другие генераторы →'}
+            </button>
+          )}
+        </div>
+      )}
+    </div>
+  ))}
+</div>className="generator-button"
         onClick={() => {
   setSelectedGenerators(prev => ({
     ...prev,
