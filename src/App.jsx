@@ -127,7 +127,7 @@ export default function App() {
       {page === 'home' && (
         <section className="home">
           
-                    <button
+                              <button
             className="main-button prompt"
             onClick={() => setPage('prompt')}
           >
@@ -135,6 +135,16 @@ export default function App() {
             <span>ПРОМПТ</span>
             <small>Создать запрос для AI</small>
           </button>
+
+          <button
+            className="main-button message"
+            onClick={() => setPage('message')}
+          >
+            <span className="button-icon">💬</span>
+            <span>СООБЩЕНИЕ</span>
+            <small>Создать красивое сообщение</small>
+          </button>
+
           <div className="ad-placeholder">
             <span>РЕКЛАМНОЕ МЕСТО</span>
           </div>
