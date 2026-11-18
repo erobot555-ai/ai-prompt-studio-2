@@ -78,7 +78,7 @@ button {
 .header-tools span:first-child {
   font-size: 40px;
   font-weight: normal;
-  transform: translateY(-6px);
+  transform: translateY(-4px);
 }
 
 .header-brand {
