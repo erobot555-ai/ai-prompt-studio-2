@@ -67,8 +67,7 @@ export default function App() {
             ⚙
           </span>
           <span title="Профиль">♙</span>
-                                        <span
-            title="О продукте"          <span
+                                                  <span
             title="О продукте"
             onClick={() => {
               const isOpen = showAbout
