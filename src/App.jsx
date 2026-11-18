@@ -81,23 +81,6 @@ const [selectedCategory, setSelectedCategory] = useState('')
           <p className="hint">Что будем создавать?</p>
 
           <div className="categories">
-  {['Картинка', 'Видео', 'Музыка', 'Текст'].map(item => (
-    <button
-      key={item}
-      className={selectedCategory === item ? 'selected' : ''}
-      onClick={() => setSelectedCategory(item)}
-    >
-  {selectedGenerators[item] || item}
-</button>
-  ))}
-</div>
-{selectedCategory && (
-  <div className="generator-list">
-    <p className="hint">Выбери AI-генератор:</p>
-    {GENERATORS[selectedCategory].map(generator => (
-      <button
-        key={generator}
-        <div className="categories">
   {[
     { name: 'Картинка', icon: '🖼️' },
     { name: 'Видео', icon: '🎥' },
@@ -116,6 +99,7 @@ const [selectedCategory, setSelectedCategory] = useState('')
       >
         <span className="category-icon">{item.icon}</span>
         <span className="category-name">{item.name}</span>
+
         {selectedGenerators[item.name] && (
           <span className="selected-generator">
             {selectedGenerators[item.name]}
@@ -161,20 +145,7 @@ const [selectedCategory, setSelectedCategory] = useState('')
       )}
     </div>
   ))}
-</div>className="generator-button"
-        onClick={() => {
-  setSelectedGenerators(prev => ({
-    ...prev,
-    [selectedCategory]: generator
-  }))
-  setSelectedCategory('')
-}}
-      >
-        {generator}
-      </button>
-    ))}
-  </div>
-)}
+</div>
           <div className="microphone">🎙️</div>
           <p className="hint">Расскажи свою идею голосом</p>
           <textarea placeholder="Или введите текст вручную..." />
