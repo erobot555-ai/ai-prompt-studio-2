@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 export default function App() {
   const [page, setPage] = useState('home')
-
+const [selectedCategory, setSelectedCategory] = useState('')
   return (
     <main className="app">
       <header className="header">
