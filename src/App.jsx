@@ -86,8 +86,8 @@ const [selectedCategory, setSelectedCategory] = useState('')
       className={selectedCategory === item ? 'selected' : ''}
       onClick={() => setSelectedCategory(item)}
     >
-      {item}
-    </button>
+  {selectedGenerators[item] || item}
+</button>
   ))}
 </div>
 {selectedCategory && (
