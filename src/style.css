@@ -68,7 +68,7 @@ button {
   border: none;
   border-radius: 0;
   background: transparent;
-  color: #ded8f5;
+  color: #aaa5c2;
   font-size: 22px;
   font-weight: normal;
   line-height: 1;
@@ -78,6 +78,7 @@ button {
 .header-tools span:first-child {
   font-size: 40px;
   font-weight: normal;
+  transform: translateY(-2px);
 }
 
 .header-brand {
