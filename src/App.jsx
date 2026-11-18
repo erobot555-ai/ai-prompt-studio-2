@@ -63,7 +63,12 @@ export default function App() {
             ⚙
           </span>
           <span title="Профиль">♙</span>
-          <span title="О продукте">ⓘ</span>
+                    <span
+            title="О продукте"
+            onClick={() => setShowAbout(true)}
+          >
+            ⓘ
+          </span>
                               <button
             className="help-button"
             onClick={() => setShowHelp(true)}
