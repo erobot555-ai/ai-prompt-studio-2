@@ -97,7 +97,10 @@ const [selectedCategory, setSelectedCategory] = useState('')
       <button
         key={generator}
         className="generator-button"
-        onClick={() => setSelectedGenerator(generator)}
+        onClick={() => {
+  setSelectedGenerator(generator)
+  setSelectedCategory('')
+}}
       >
         {generator}
       </button>
