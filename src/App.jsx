@@ -49,10 +49,16 @@ const [selectedCategory, setSelectedCategory] = useState('')
           <p className="hint">Что будем создавать?</p>
 
           <div className="categories">
-            {['Картинка', 'Видео', 'Музыка', 'Текст'].map(item => (
-              <button key={item}>{item}</button>
-            ))}
-          </div>
+  {['Картинка', 'Видео', 'Музыка', 'Текст'].map(item => (
+    <button
+      key={item}
+      className={selectedCategory === item ? 'selected' : ''}
+      onClick={() => setSelectedCategory(item)}
+    >
+      {item}
+    </button>
+  ))}
+</div>>
 
           <div className="microphone">🎙️</div>
           <p className="hint">Расскажи свою идею голосом</p>
