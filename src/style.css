@@ -536,8 +536,6 @@ button:active:not(.main-button) {
 
 /* Страница настроек — чёрно-белый стиль */
 .settings-page {
-/* Страница настроек — чёрно-белый стиль */
-.settings-page {
   position: fixed;
   inset: 0;
   z-index: 1100;
