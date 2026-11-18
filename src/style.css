@@ -157,21 +157,7 @@ button {
   letter-spacing: 1px;
 }
 
-.main-button small {
-  color: #c2bfd5;
-}
 
-.prompt {
-  background: linear-gradient(120deg, #5140a9, #30285d);
-}
-
-.message {
-  background: linear-gradient(120deg, #205d70, #183c50);
-}
-
-.button-icon {
-  font-size: 23px;
-}
 
 .bottom-nav {
   display: flex;
