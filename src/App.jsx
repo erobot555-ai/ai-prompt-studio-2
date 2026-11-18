@@ -63,7 +63,7 @@ export default function App() {
           </span>
           <span title="Профиль">♙</span>
           <span title="О продукте">ⓘ</span>
-                    <button          <button
+                              <button
             className="help-button"
             onClick={() => setShowHelp(true)}
             aria-label="Помощь"
