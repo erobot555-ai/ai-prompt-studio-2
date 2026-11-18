@@ -368,7 +368,7 @@ export default function App() {
         </section>
       )}
 
-      {page.startsWith('settings-') && (
+            {page.startsWith('settings-') && (
         <section className="settings-page">
           <button
             className="settings-back"
@@ -384,3 +384,7 @@ export default function App() {
           </p>
         </section>
       )}
+
+    </main>
+  )
+}
