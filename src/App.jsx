@@ -127,13 +127,8 @@ export default function App() {
       {page === 'home' && (
         <section className="home">
           <div className="welcome">
-            <span>AI PROMPT STUDIO 2.0</span>
-            <h2>Преврати свою идею в результат</h2>
-            <p>
-              Просто расскажи, что ты хочешь.
-              Мы поможем подобрать правильные слова.
-            </p>
-          </div>
+  <h2>Воплоти идею в жизнь</h2>
+</div>
 
           <button
             className="main-button prompt"
