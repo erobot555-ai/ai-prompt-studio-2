@@ -57,38 +57,65 @@ const [selectedCategory, setSelectedCategory] = useState('')
       ?
     </button>
   )}
+
 </header>
 
+{page === 'home' && showHelp && (
+  <div className="help-overlay">
+    <div className="help-card">
+      <button
+        className="help-close"
+        onClick={() => setShowHelp(false)}
+      >
+        ✕
+      </button>
 
-      {page === 'home' && (
-        <section className="home">
-          <div className="welcome">
-            <span>AI PROMPT STUDIO 2.0</span>
-            <h2>Преврати свою идею в результат</h2>
-            <p>Просто расскажи, что ты хочешь. Мы поможем подобрать правильные слова.</p>
-          </div>
+      <h2>В чём наша задача?</h2>
 
-          <button className="main-button prompt" onClick={() => setPage('prompt')}>
-            <span className="button-icon">✦</span>
-            <span>ПРОМПТ</span>
-            <small>Создать запрос для AI</small>
-          </button>
+      <p>
+        AI Prompt Studio — это твой интеллектуальный помощник
+        для работы с искусственным интеллектом.
+      </p>
 
-          <button className="main-button message" onClick={() => setPage('message')}>
-            <span className="button-icon">✉</span>
-            <span>СООБЩЕНИЕ</span>
-            <small>Создать красивое сообщение</small>
-          </button>
+      <p>
+        Мы не просто создаём красивые промпты. Мы превращаем
+        твои идеи в точные, продуманные и адаптированные под
+        язык и особенности выбранного AI-генератора запросы.
+      </p>
 
-          <nav className="bottom-nav">
-            <button>История</button>
-            <button>Настройки</button>
-            <button>Информация</button>
-          </nav>
-        </section>
-      )}
+      <p>
+        <strong>
+          Меньше лишних слов. Меньше неудачных попыток.
+          Больше точности и качественных результатов.
+        </strong>
+      </p>
 
-      {page === 'prompt' && (
+      <p>
+        Помогаем сократить время на подготовку запросов,
+        количество повторных генераций и, где это возможно,
+        расходы на обработку.
+      </p>
+
+      <h3>А ещё мы умеем работать с сообщениями и SMS!</h3>
+
+      <p>
+        Исправлять ошибки, улучшать текст, менять его длину,
+        корректировать формулировки и настраивать стиль:
+        от дружелюбного до официального, делового или романтичного.
+      </p>
+
+      <p>
+        <strong>
+          Твоя идея — наша задача. Точный запрос и правильные
+          слова — лучший путь к результату.
+        </strong>
+      </p>
+    </div>
+  </div>
+)}
+
+{page === 'home' && (
+
         <section className="work-page">
           <button className="back" onClick={() => setPage('home')}>← Назад</button>
           <h2>Создаём промпт</h2>
