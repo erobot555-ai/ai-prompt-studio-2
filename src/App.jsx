@@ -136,13 +136,13 @@ export default function App() {
             <small>Создать запрос для AI</small>
           </button>
           >
-          <button
-            className="main-button message"
-            onClick={() => setPage('message')}
+                    <button
+            className="main-button prompt"
+            onClick={() => setPage('prompt')}
           >
-            <span className="button-icon">✉</span>
-            <span>СООБЩЕНИЕ</span>
-            <small>Создать красивое сообщение</small>
+            <span className="button-icon">🪄</span>
+            <span>ПРОМПТ</span>
+            <small>Создать запрос для AI</small>
           </button>
           <div className="ad-placeholder">
             <span>РЕКЛАМНОЕ МЕСТО</span>
