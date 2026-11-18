@@ -128,14 +128,6 @@ export default function App() {
         <section className="home">
           
           <button
-            className="main-button prompt"
-            onClick={() => setPage('prompt')}
-        
-            <span className="button-icon">🪄</span>
-            <span>ПРОМПТ</span>
-            <small>Создать запрос для AI</small>
-          </button>
-          >
                     <button
             className="main-button prompt"
             onClick={() => setPage('prompt')}
