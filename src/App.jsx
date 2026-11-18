@@ -48,7 +48,12 @@ export default function App() {
       <header className="header">
 
         <div className="header-tools">
-          <span title="История">◷</span>
+                    <span
+            title="История"
+            onClick={() => setShowHistory(true)}
+          >
+            ◷
+          </span>
           <span title="Настройки">⚙</span>
           <span title="Профиль">♙</span>
           <span title="О продукте">ⓘ</span>
