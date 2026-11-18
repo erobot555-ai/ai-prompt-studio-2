@@ -22,8 +22,11 @@ button {
   width: 100%;
   max-width: 520px;
   min-height: 100vh;
+  min-height: 100dvh;
   margin: 0 auto;
   padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(160deg, #191b2c, #10111b 65%);
 }
 
