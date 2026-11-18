@@ -90,7 +90,20 @@ const [selectedCategory, setSelectedCategory] = useState('')
     </button>
   ))}
 </div>
-
+{selectedCategory && (
+  <div className="generator-list">
+    <p className="hint">Выбери AI-генератор:</p>
+    {GENERATORS[selectedCategory].map(generator => (
+      <button
+        key={generator}
+        className="generator-button"
+        onClick={() => setSelectedGenerator(generator)}
+      >
+        {generator}
+      </button>
+    ))}
+  </div>
+)}
           <div className="microphone">🎙️</div>
           <p className="hint">Расскажи свою идею голосом</p>
           <textarea placeholder="Или введите текст вручную..." />
