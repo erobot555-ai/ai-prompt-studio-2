@@ -144,7 +144,9 @@ export default function App() {
             <span>СООБЩЕНИЕ</span>
             <small>Создать красивое сообщение</small>
           </button>
-
+          <div className="ad-placeholder">
+            <span>РЕКЛАМНОЕ МЕСТО</span>
+          </div>
           <nav className="bottom-nav">
             <button>История</button>
             <button>Настройки</button>
