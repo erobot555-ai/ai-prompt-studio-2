@@ -34,8 +34,7 @@ const GENERATORS = {
 export default function App() {
   const [page, setPage] = useState('home')
 const [selectedCategory, setSelectedCategory] = useState('')
-  const [selectedGenerator, setSelectedGenerator] = useState('')
-  return (
+  const [selectedGenerators, setSelectedGenerators] = useState({})
     <main className="app">
       <header className="header">
         <div className="logo">AI</div>
