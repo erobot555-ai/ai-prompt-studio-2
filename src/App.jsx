@@ -53,9 +53,10 @@ export default function App() {
         <div className="header-tools">
                               <span
             title="История"
-            onClick={() => {
+                        onClick={() => {
               setShowHelp(false)
               setShowAbout(false)
+              setShowProfile(false)
               setShowHistory(true)
             }}
           >
