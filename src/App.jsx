@@ -112,7 +112,36 @@ export default function App() {
           </div>
         </div>
 
-            </header>
+                        </header>
+
+            {showHistory && (
+        <div
+          className="history-overlay"
+          onClick={() => setShowHistory(false)}
+        >
+          <div
+            className="history-drawer"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="history-header">
+              <h2>История</h2>
+              <button
+                className="history-close"
+                onClick={() => setShowHistory(false)}
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className="history-content">
+              <p>Здесь будет храниться твоя история.</p>
+              <p>
+                Промпты, сообщения, переписки и сохранённые материалы.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
             {showProfile && (
         <div
