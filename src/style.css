@@ -301,7 +301,9 @@ textarea {
   font-weight: bold;
 }
 
-transform
+button:active:not(.main-button):not(.header-brand):not(.help-button) {
+  transform: scale(0.98);
+}
 
 /* Небольшие экраны */
 @media (max-width: 360px) {
