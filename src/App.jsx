@@ -173,7 +173,7 @@ export default function App() {
           </div>
         </div>
       )}
-            {page === 'home' && showHelp && (
+            {['home', 'prompt', 'message'].includes(page) && showHelp && (
                 <div className="help-overlay">
                     <div
             className="help-card"
@@ -498,7 +498,7 @@ export default function App() {
         </section>
       )}
 
-      {page === 'home' && showAbout && (
+      {['home', 'prompt', 'message'].includes(page) && showAbout && (
         <div className="help-overlay">
                                         <div
               className="help-card"
