@@ -67,7 +67,18 @@ export default function App() {
           >
             ⚙
           </span>
-          <span title="Профиль">♙</span>
+                    <span
+            title="Профиль"
+            onClick={() => {
+              const isOpen = showProfile
+              setShowHelp(false)
+              setShowAbout(false)
+              setShowHistory(false)
+              setShowProfile(!isOpen)
+            }}
+          >
+            ♙
+          </span>
                                                   <span
             title="О продукте"
             onClick={() => {
@@ -103,33 +114,35 @@ export default function App() {
 
             </header>
 
-      {showHistory && (
+            {showProfile && (
         <div
-          className="history-overlay"
-          onClick={() => setShowHistory(false)}
+          className="profile-overlay"
+          onClick={() => setShowProfile(false)}
         >
           <div
-            className="history-drawer"
+            className="profile-drawer"
             onClick={(event) => event.stopPropagation()}
           >
-            <div className="history-header">
-              <h2>История</h2>
+            <div className="profile-header">
+              <h2>Профиль</h2>
               <button
-                className="history-close"
-                onClick={() => setShowHistory(false)}
+                className="profile-close"
+                onClick={() => setShowProfile(false)}
               >
                 ✕
               </button>
             </div>
 
-            <div className="history-content">
-              <p>Здесь будет храниться твоя история.</p>
-              <p>Промпты, сообщения, переписки и сохранённые материалы.</p>
+            <div className="profile-content">
+              <p>Здесь будет твой профиль.</p>
+              <p>
+                Настройки аккаунта, персональные данные и синхронизация
+                появятся на следующих этапах.
+              </p>
             </div>
           </div>
         </div>
       )}
-
             {page === 'home' && showHelp && (
                 <div className="help-overlay">
           <div className="help-card">
