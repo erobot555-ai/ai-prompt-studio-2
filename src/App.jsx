@@ -105,13 +105,29 @@ export default function App() {
           </button>
         </div>
 
-                        <div className="header-brand">
-          <div className="logo">AI</div>
-          <div>
-            <h1>PROMPT STUDIO</h1>
-            <p>Твои идеи — наш результат.</p>
-          </div>
-        </div>
+                        <button
+  className="header-brand"
+  onClick={() => {
+    setPage('home')
+    setShowHelp(false)
+    setShowAbout(false)
+    setShowHistory(false)
+    setShowProfile(false)
+  }}
+  style={{
+    border: 'none',
+    background: 'transparent',
+    color: 'inherit',
+    font: 'inherit',
+    cursor: 'pointer'
+  }}
+>
+  <div className="logo">AI</div>
+  <div>
+    <h1>PROMPT STUDIO</h1>
+    <p>Твои идеи — наш результат.</p>
+  </div>
+</button>
 
                         </header>
 
